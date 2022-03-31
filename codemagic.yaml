@@ -5,6 +5,7 @@ workflows:
       xcode: latest
       cocoapods: default
       vars:
+          XCODE_WORKSPACE: "Runner.xcworkspace" # <-- Put the name of your project here. 
           XCODE_PROJECT: "Runner.xcodeproj" # <-- Put the name of your project here. 
           XCODE_SCHEME: "Runner" # <-- Put the name of your scheme here.
       flutter: stable
@@ -19,7 +20,7 @@ workflows:
           find . -name "Podfile" -execdir pod install \;
       - name: Build debug app
         script: |
-          cd . && cd ios && xcodebuild build -project "$XCODE_PROJECT" \-scheme "$XCODE_SCHEME" \ CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO          
+          cd . && cd ios && xcodebuild -sdk iphonesimulator -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME" -configuration Debug          
     artifacts:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
     publishing:
