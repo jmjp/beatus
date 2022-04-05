@@ -16,6 +16,8 @@ class BaseViewModel extends ChangeNotifier {
     log = getLogger(title ?? runtimeType.toString());
   }
 
+  
+
   bool get busy => _busy;
   bool get isDisposed => _isDisposed;
   String get title => _title ?? runtimeType.toString();

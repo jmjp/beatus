@@ -20,7 +20,7 @@ class DefaultTheme {
 
   //dark colors
   static final Color _darkBackground = Color(0xFF171717);
-  static final Color _textDarkColor = Color(0xFFBEBEBE);
+  static final Color _textDarkColor = Color(0xFFFFFFFF);
   static final Color _primaryDarkColor = _primaryColor;
   static final Color _splashDarkColor = _splashColor;
   static final Color _bordersDark = _primaryColor.withAlpha(200);

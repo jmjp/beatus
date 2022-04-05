@@ -1,12 +1,16 @@
 import 'package:dio/dio.dart';
 
-class ApiService {
-  Dio dio = Dio(BaseOptions(
-    baseUrl: 'https://jsonplaceholder.typicode.com/',
-    connectTimeout: 5000,
-    receiveTimeout: 3000,
-  ));
+import '../utils/http/http.interceptors.dart';
 
+class ApiService {
+  var dio = Dio(
+    BaseOptions(
+      baseUrl: 'https://jsonplaceholder.typicode.com/',
+      connectTimeout: 5000,
+      receiveTimeout: 3000,
+    ),
+  )..interceptors.add(HttpInterceptors());
+  
   Future<Response> get(String url) async {
     return await dio.get(url);
   }

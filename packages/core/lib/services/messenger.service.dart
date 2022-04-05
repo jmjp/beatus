@@ -11,7 +11,7 @@ class MessengerService extends BaseServiceModel {
     var snack = SnackBar(
       content: snackBar.content,
       backgroundColor: snackBar.backgroundColor,
-      duration: Duration(seconds: 2, milliseconds: 800),
+      duration: const Duration(seconds: 2, milliseconds: 800),
       elevation: 20,
       dismissDirection: DismissDirection.up,
     );

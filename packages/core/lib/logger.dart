@@ -12,5 +12,5 @@ class SimpleLogPrinter extends LogPrinter {
 }
 
 Logger getLogger(String className) {
-  return Logger(printer: PrefixPrinter(PrettyPrinter(colors: true)));
+  return Logger(printer: PrefixPrinter(PrettyPrinter(colors: true, printTime: true, lineLength: 170)));
 }
