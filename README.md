@@ -2,6 +2,7 @@
 
 - Um projeto flutter que posibilita a reutilização do core de aplicação por diversos outros aplicativos.
 - Separando regra de negocio de interface e possibilitando ter uma estrutura mais modular, onde cada feature da aplicação ou uma tela poderá ser um "package" novo e herdado e implementado por outras aplicações
+- Modulo core: https://github.com/jmjp/applications_core
 
 ## Getting Started
 
