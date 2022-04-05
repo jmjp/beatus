@@ -30,7 +30,9 @@ dependencies:
   flutter:
     sdk: flutter
   core:
-    path: ./packages/core
+    git:
+      url: https://github.com/jmjp/applications_core.git
+    
 
 
   # The following adds the Cupertino Icons font to your application.
